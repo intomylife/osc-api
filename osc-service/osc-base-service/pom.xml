@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 继承父 -->
+    <parent>
+        <groupId>com.zwc</groupId>
+        <artifactId>osc-service</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <!-- 三坐标 -->
+    <groupId>com.zwc</groupId>
+    <artifactId>osc-base-service</artifactId>
+    <version>1.0</version>
+
+    <!-- 工程名称描述 -->
+    <name>osc-base-service</name>
+    <description>基础工程</description>
+
+    <!-- 打包方式 -->
+    <packaging>pom</packaging>
+
+    <!-- 子模块 -->
+    <modules>
+        <module>osc-base-service-api</module>
+        <module>osc-base-service-core</module>
+    </modules>
+
+</project>

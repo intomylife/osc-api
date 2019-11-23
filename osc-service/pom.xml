@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 三坐标 -->
+    <groupId>com.zwc</groupId>
+    <artifactId>osc-service</artifactId>
+    <version>1.0</version>
+
+    <!-- 工程名称描述 -->
+    <name>osc-service</name>
+    <description>服务工程</description>
+
+    <!-- 子模块 -->
+    <modules>
+        <!-- 注册中心 -->
+        <module>osc-registry-service</module>
+        <!-- 网关 -->
+        <module>osc-gateway-service</module>
+        <!-- 断路器聚合监控中心 -->
+        <module>osc-turbine-service</module>
+        <!-- 链路跟踪监控中心 -->
+        <module>osc-sleuth-service</module>
+        <!-- 基础工程 -->
+        <module>osc-base-service</module>
+        <!-- 日志工程 -->
+        <module>osc-log-service</module>
+    </modules>
+
+    <!-- 打包方式 -->
+    <packaging>pom</packaging>
+
+    <!-- 继承父 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
+    <!-- 在 properties 下声明相应的版本信息，然后在 dependency 下引用的时候用 ${} 就可以引入该版本 jar 包了 -->
+    <properties>
+        <!-- 编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- jdk -->
+        <java.version>1.8</java.version>
+
+        <!-- SpringBoot -->
+        <platform-bom.version>Cairo-SR3</platform-bom.version>
+
+        <!-- SpringCloud -->
+        <spring-cloud-dependencies.version>Finchley.RELEASE</spring-cloud-dependencies.version>
+
+        <!-- 上传镜像 -->
+        <!-- 远程仓库用户名 -->
+        <docker.image.prefix>intomylife</docker.image.prefix>
+        <!-- 远程 docker 服务地址 -->
+        <docker.host>http://DockerHost:2375/</docker.host>
+        <!-- 指定 docker hub 仓库地址，用户名密码配置在 settings.xml 文件中 -->
+        <settings.docker.id>docker-hub</settings.docker.id>
+        <docker.registry.url>https://index.docker.io/v1/</docker.registry.url>
+
+        <!-- commons 工程版本 -->
+        <commons.version>1.0</commons.version>
+    </properties>
+
+    <!-- 加入依赖 -->
+    <dependencies>
+        <!-- springboot 测试依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- 依赖 jar 包版本管理的管理器 -->
+    <!-- 如果 dependencies 里的 dependency 自己没有声明 version 元素，那么 maven 就此处来找版本声明。 -->
+    <!-- 如果有，就会继承它；如果没有就会报错，告诉你没有版本信息 -->
+    <!-- 优先级：如果 dependencies 里的 dependency 已经声明了版本信息，就不会生效此处的版本信息了 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot -->
+            <dependency>
+                <groupId>io.spring.platform</groupId>
+                <artifactId>platform-bom</artifactId>
+                <version>${platform-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- SpringCloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
