@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.zwc</groupId>
         <artifactId>osc-base-service</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
     </parent>
 
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-base-service-core</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <!-- 工程名称描述 -->
     <name>osc-base-service-core</name>
@@ -40,12 +40,7 @@
         <dependency>
             <groupId>com.zwc</groupId>
             <artifactId>osc-base-service-api</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <!-- springboot web 依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <version>1.1</version>
         </dependency>
         <!-- 提供者消费者 -->
         <dependency>

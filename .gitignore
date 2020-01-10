@@ -31,3 +31,4 @@ target/
 
 ### Others ###
 .DS_Store
+logs/

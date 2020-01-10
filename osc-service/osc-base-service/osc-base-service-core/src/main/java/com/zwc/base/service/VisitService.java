@@ -65,7 +65,6 @@ public class VisitService extends ServiceImpl<VisitMapper, Visit>{
             VisitRequestMongoDBDTO visitRequestMongoDBDTO = new VisitRequestMongoDBDTO();
             // 复值
             BeanUtils.copyProperties(visit, visitRequestMongoDBDTO);
-            // 重新设置时间
             // 给 log-service 发送消息
             kafkaTemplate.send(KafkaConstants.TO_VISIT, JSON.toJSONString(visitRequestMongoDBDTO));
         }else {
