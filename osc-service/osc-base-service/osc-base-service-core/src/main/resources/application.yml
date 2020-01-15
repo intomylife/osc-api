@@ -1,37 +1,17 @@
-# 端口
-server:
-  port: 8080
-
 spring:
+  # 选择环境
+  profiles:
+    ## 开发环境
+    active: dev
+    ## 测试环境
+    ## active: stg
+    ## 生产环境
+    ## active: prd
+
+  ## 多个环境的公用配置
   application:
-    # 应用名称
-    name: base-service
-
-  datasource:
-    # 为了 docker 设置 MySQL 地址准备
-    host: 127.0.0.1
-    # 连接 MySQL
-    druid:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://${spring.datasource.host}:3306/osc_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=PRC&useSSL=false
-      username: root
-      password: 123456
-
-  # 连接 Redis
-  redis:
-    database: 0
-    host: localhost
-    port: 6379
-    password: 123456789
-
-  # 连接 MongoDB
-  data:
-    mongodb:
-      host: 127.0.0.1
-      # 无密码
-      # uri: mongodb://localhost:27017/osc_db
-      # 有密码（name：用户名 / password：密码）
-      uri: mongodb://zwc:123456@${spring.data.mongodb.host}:27017/osc_db
+      # 应用名称
+      name: base-service
 
   # 配置 Flyway
   flyway:
@@ -78,3 +58,41 @@ management:
 logging:
   level:
     com.zwc.base.mapper: debug
+
+---
+
+# 端口
+server:
+  port: 8080
+
+spring:
+  ## 开发环境
+  profiles: dev
+
+  ## 单个环境经常改动的配置
+
+---
+
+# 端口
+server:
+  port: 8080
+
+spring:
+  ## 测试环境
+  profiles: stg
+
+  ## 单个环境经常改动的配置
+
+---
+
+# 端口
+server:
+  port: 8080
+
+spring:
+  ## 生产环境
+  profiles: prd
+
+  ## 单个环境经常改动的配置
+
+---

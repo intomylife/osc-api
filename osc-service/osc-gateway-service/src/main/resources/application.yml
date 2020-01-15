@@ -1,18 +1,17 @@
-# 端口
-server:
-  port: 8000
-
 spring:
-  application:
-    # 应用名称
-    name: gateway-service
+  # 选择环境
+  profiles:
+    ## 开发环境
+    active: dev
+    ## 测试环境
+    ## active: stg
+    ## 生产环境
+    ## active: prd
 
-  # 连接 Redis
-  redis:
-    host: localhost
-    port: 6379
-    database: 0
-    password: 123456789
+  ## 多个环境的公用配置
+  application:
+      # 应用名称
+      name: gateway-service
 
   cloud:
     gateway:
@@ -38,7 +37,7 @@ spring:
         - name: Hystrix
           args:
             name: fallbackcmd
-            ### fallback 时调用的方法 http://localhost:8000/fallback
+            ### fallback 时调用的方法 http://127.0.0.1:8000/fallback
             fallbackUri: forward:/fallback
         ## 限流
         - name: RequestRateLimiter
@@ -81,3 +80,41 @@ logging:
   level:
     # log 级别
     org.springframework.cloud.gateway: debug
+
+---
+
+# 端口
+server:
+  port: 8000
+
+spring:
+  ## 开发环境
+  profiles: dev
+
+  ## 单个环境经常改动的配置
+
+---
+
+# 端口
+server:
+  port: 8000
+
+spring:
+  ## 测试环境
+  profiles: stg
+
+  ## 单个环境经常改动的配置
+
+---
+
+# 端口
+server:
+  port: 8000
+
+spring:
+  ## 生产环境
+  profiles: prd
+
+  ## 单个环境经常改动的配置
+
+---
