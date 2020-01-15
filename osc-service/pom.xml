@@ -6,7 +6,7 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-service</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
 
     <!-- 工程名称描述 -->
     <name>osc-service</name>
@@ -56,13 +56,13 @@
         <!-- 远程仓库用户名 -->
         <docker.image.prefix>intomylife</docker.image.prefix>
         <!-- 远程 docker 服务地址 -->
-        <docker.host>http://DockerHost:2375/</docker.host>
+        <docker.host>https://DockerHost:2375/</docker.host>
         <!-- 指定 docker hub 仓库地址，用户名密码配置在 settings.xml 文件中 -->
         <settings.docker.id>docker-hub</settings.docker.id>
         <docker.registry.url>https://index.docker.io/v1/</docker.registry.url>
 
         <!-- commons 工程版本 -->
-        <commons.version>1.2</commons.version>
+        <commons.version>1.3</commons.version>
     </properties>
 
     <!-- 加入依赖 -->
