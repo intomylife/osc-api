@@ -7,13 +7,13 @@
 	<parent>
 		<groupId>com.zwc</groupId>
 		<artifactId>osc-log-service</artifactId>
-		<version>1.3</version>
+		<version>1.4.1</version>
 	</parent>
 
 	<!-- 三坐标 -->
 	<groupId>com.zwc</groupId>
 	<artifactId>osc-log-service-api</artifactId>
-	<version>1.3</version>
+	<version>1.4.1</version>
 
 	<!-- 工程名称描述 -->
 	<name>osc-log-service-api</name>

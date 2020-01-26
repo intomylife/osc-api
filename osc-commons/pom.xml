@@ -6,7 +6,7 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-commons</artifactId>
-    <version>1.3</version>
+    <version>1.4.1</version>
 
     <!-- 工程名称和描述 -->
     <name>osc-commons</name>
@@ -26,7 +26,7 @@
         <platform-bom.version>Cairo-SR3</platform-bom.version>
 
         <!-- SpringCloud -->
-        <spring-cloud-dependencies.version>Finchley.RELEASE</spring-cloud-dependencies.version>
+        <spring-cloud-dependencies.version>Finchley.SR2</spring-cloud-dependencies.version>
 
         <!-- ali json -->
         <fastjson.version>1.2.47</fastjson.version>
