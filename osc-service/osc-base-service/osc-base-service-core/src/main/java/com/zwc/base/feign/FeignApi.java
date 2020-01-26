@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date 2019/5/20 23:21
  * @Version 1.0
  */
-@FeignClient(value = "log-service" , fallback = FeignApiFallBack.class)
+@FeignClient(value = "log-service-core" , fallback = FeignApiFallBack.class)
 public interface FeignApi {
 
     /*
      * @ClassName FeignApi
-     * @Desc TODO   通过 log-service 服务名调用 b() 方法
+     * @Desc TODO   通过 log-service-core 服务名调用 b() 方法
      * @Date 2019/5/20 23:21
      * @Version 1.0
      */

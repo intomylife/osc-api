@@ -11,7 +11,7 @@ spring:
   ## 多个环境的公用配置
   application:
       # 应用名称
-      name: base-service
+      name: base-service-core
 
   # 配置 Flyway
   flyway:

@@ -6,7 +6,7 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-service</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
 
     <!-- 工程名称描述 -->
     <name>osc-service</name>
@@ -62,7 +62,7 @@
         <docker.registry.url>https://index.docker.io/v1/</docker.registry.url>
 
         <!-- commons 工程版本 -->
-        <commons.version>1.4.1</commons.version>
+        <commons.version>1.4.2</commons.version>
     </properties>
 
     <!-- 加入依赖 -->

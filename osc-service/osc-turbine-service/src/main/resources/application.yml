@@ -25,7 +25,7 @@ eureka:
 
 turbine:
   # 监控的应用名称，多个以逗号隔开
-  app-config: base-service, log-service
+  app-config: base-service-core, log-service-core
   aggregator:
     # 指定聚合哪些集群，默认为 default
     clusterConfig: default

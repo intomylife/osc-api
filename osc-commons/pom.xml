@@ -6,7 +6,7 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-commons</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
 
     <!-- 工程名称和描述 -->
     <name>osc-commons</name>
@@ -46,7 +46,7 @@
         <!-- 而这个组件的功能就是帮助我们自动生成这个 json 文件 -->
         <!-- 我们会用到的另外一个组件 springfox-swagger-ui 就是将这个 json 文件解析出来 -->
         <!-- 用一种更友好的方式呈现出来 -->
-        <springfox.version>2.7.0</springfox.version>
+        <springfox.version>2.9.2</springfox.version>
     </properties>
 
     <!-- 加入依赖 -->

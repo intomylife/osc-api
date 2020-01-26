@@ -1,4 +1,4 @@
-package com.zwc.gateway.hystrix;
+package com.zwc.gateway.controller.hystrix;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

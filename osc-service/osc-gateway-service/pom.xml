@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.zwc</groupId>
         <artifactId>osc-service</artifactId>
-        <version>1.4.1</version>
+        <version>1.4.2</version>
     </parent>
 
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-gateway-service</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
 
     <!-- 工程名称描述 -->
     <name>osc-gateway-service</name>
@@ -28,6 +28,12 @@
         <fastjson.version>1.2.47</fastjson.version>
         <!-- docker 镜像名称 -->
         <docker.image.name>osc-gateway</docker.image.name>
+        <!-- swagger -->
+        <!-- pringfox-swagger2 依然是依赖 OSA 规范文档，也就是一个描述 API 的 json 文件 -->
+        <!-- 而这个组件的功能就是帮助我们自动生成这个 json 文件 -->
+        <!-- 我们会用到的另外一个组件 springfox-swagger-ui 就是将这个 json 文件解析出来 -->
+        <!-- 用一种更友好的方式呈现出来 -->
+        <springfox.version>2.9.2</springfox.version>
     </properties>
 
     <!-- 加入依赖 -->
@@ -62,6 +68,17 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        <!-- swagger 依赖 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox.version}</version>
         </dependency>
     </dependencies>
 
