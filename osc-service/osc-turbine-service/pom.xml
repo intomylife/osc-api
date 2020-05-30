@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.zwc</groupId>
         <artifactId>osc-service</artifactId>
-        <version>1.4.2</version>
+        <version>${osc.version}</version>
     </parent>
 
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-turbine-service</artifactId>
-    <version>1.4.2</version>
+    <version>${turbine.version}</version>
 
     <!-- 工程名称描述 -->
     <name>osc-turbine-service</name>

@@ -6,7 +6,7 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-commons</artifactId>
-    <version>1.4.2</version>
+    <version>1.4.3</version>
 
     <!-- 工程名称和描述 -->
     <name>osc-commons</name>
