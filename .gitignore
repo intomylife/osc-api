@@ -32,3 +32,10 @@ target/
 ### Others ###
 .DS_Store
 logs/
+
+
+**/mvnw
+**/mvnw.cmd
+**/.mvn
+
+**/target
