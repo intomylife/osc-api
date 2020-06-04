@@ -6,11 +6,11 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-service</artifactId>
-    <version>${osc.version}</version>
+    <version>1.4.3</version>
 
     <!-- 工程名称描述 -->
     <name>osc-service</name>
-    <description>服务工程</description>
+    <description>聚合服务工程</description>
 
     <!-- 子模块 -->
     <modules>
@@ -60,24 +60,6 @@
         <!-- 指定 docker hub 仓库地址，用户名密码配置在 settings.xml 文件中 -->
         <settings.docker.id>docker-hub</settings.docker.id>
         <docker.registry.url>https://index.docker.io/v1/</docker.registry.url>
-
-        <!-- 所有工程的版本信息 -->
-        <!--  commons -->
-        <commons.version>1.4.3</commons.version>
-        <!--  service -->
-        <osc.version>1.4.3</osc.version>
-        <!-- registry -->
-        <registry.version>1.4.3</registry.version>
-        <!-- gateway -->
-        <gateway.version>1.4.3</gateway.version>
-        <!-- base -->
-        <base.version>1.4.3</base.version>
-        <!-- log -->
-        <log.version>1.4.3</log.version>
-        <!-- turbine -->
-        <turbine.version>1.4.3</turbine.version>
-        <!-- sleuth -->
-        <sleuth.version>1.4.3</sleuth.version>
     </properties>
 
     <!-- 加入依赖 -->

@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.zwc</groupId>
         <artifactId>osc-base-service</artifactId>
-        <version>${base.version}</version>
+        <version>1.4.3</version>
     </parent>
 
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-base-service-core</artifactId>
-    <version>${base.version}</version>
+    <version>1.4.3</version>
 
     <!-- 工程名称描述 -->
     <name>osc-base-service-core</name>
@@ -34,13 +34,13 @@
         <dependency>
             <groupId>com.zwc</groupId>
             <artifactId>osc-commons</artifactId>
-            <version>${commons.version}</version>
+            <version>1.4.3</version>
         </dependency>
         <!-- api 工程依赖 -->
         <dependency>
             <groupId>com.zwc</groupId>
             <artifactId>osc-base-service-api</artifactId>
-            <version>${base.version}</version>
+            <version>1.4.3</version>
         </dependency>
         <!-- 提供者消费者 -->
         <dependency>
