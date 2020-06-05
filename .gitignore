@@ -39,3 +39,6 @@ logs/
 **/.mvn
 
 **/target
+
+### bak ###
+*.versionsBackup

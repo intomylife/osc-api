@@ -26,6 +26,8 @@
     <properties>
         <!-- docker 镜像名称 -->
         <docker.image.name>osc-base</docker.image.name>
+        <!-- 公用工程版本号 -->
+        <osc.commons.version>1.4.3</osc.commons.version>
     </properties>
 
     <!-- 加入依赖 -->
@@ -34,7 +36,7 @@
         <dependency>
             <groupId>com.zwc</groupId>
             <artifactId>osc-commons</artifactId>
-            <version>1.4.3</version>
+            <version>${osc.commons.version}</version>
         </dependency>
         <!-- api 工程依赖 -->
         <dependency>
