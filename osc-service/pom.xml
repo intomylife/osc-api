@@ -6,11 +6,44 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-service</artifactId>
-    <version>1.4.3</version>
+    <version>1.4.4</version>
 
     <!-- 工程名称描述 -->
     <name>osc-service</name>
     <description>聚合服务工程</description>
+
+    <!-- 打包方式 -->
+    <packaging>pom</packaging>
+
+    <!-- 私有仓库 -->
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>nexus3</id>-->
+            <!--<url>http://10.211.55.25:18081/repository/maven-public/</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+
+    <!-- 部署到远程私有仓库 -->
+    <distributionManagement>
+        <!-- 正式版本 -->
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://10.211.55.25:18081/repository/maven-releases/</url>
+        </repository>
+        <!-- 测试版本 -->
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://10.211.55.25:18081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <!-- 子模块 -->
     <modules>
@@ -27,9 +60,6 @@
         <!-- 日志工程 -->
         <module>osc-log-service</module>
     </modules>
-
-    <!-- 打包方式 -->
-    <packaging>pom</packaging>
 
     <!-- 继承父 -->
     <parent>

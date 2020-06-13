@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.zwc</groupId>
         <artifactId>osc-log-service</artifactId>
-        <version>1.4.3</version>
+        <version>1.4.4</version>
     </parent>
 
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-log-service-core</artifactId>
-    <version>1.4.3</version>
+    <version>1.4.4</version>
 
     <!-- 工程名称描述 -->
     <name>osc-log-service-core</name>
@@ -27,7 +27,7 @@
         <!-- docker 镜像名称 -->
         <docker.image.name>osc-log</docker.image.name>
         <!-- 公用工程版本号 -->
-        <osc.commons.version>1.4.3</osc.commons.version>
+        <osc.commons.version>1.4.4</osc.commons.version>
     </properties>
 
     <!-- 加入依赖 -->
@@ -42,12 +42,12 @@
         <dependency>
             <groupId>com.zwc</groupId>
             <artifactId>osc-log-service-api</artifactId>
-            <version>1.4.3</version>
+            <version>1.4.4</version>
         </dependency>
         <dependency>
             <groupId>com.zwc</groupId>
             <artifactId>osc-base-service-api</artifactId>
-            <version>1.4.3</version>
+            <version>1.4.4</version>
         </dependency>
         <!-- 提供者消费者 -->
         <dependency>
@@ -97,10 +97,10 @@
                 <version>1.1.1</version>
                 <!-- 绑定插件执行动作 -->
                 <executions>
-                    <!-- mav package = mav package + docker:build + docker:push -->
+                    <!-- mav deploy = mav deploy + docker:build + docker:push -->
                     <execution>
                         <id>build-image</id>
-                        <phase>package</phase>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>build</goal>
                             <goal>push</goal>

@@ -6,7 +6,7 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-commons</artifactId>
-    <version>1.4.3</version>
+    <version>1.4.4</version>
 
     <!-- 工程名称和描述 -->
     <name>osc-commons</name>
@@ -14,6 +14,37 @@
 
     <!-- 打包方式 -->
     <packaging>jar</packaging>
+
+    <!-- 私有仓库 -->
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>nexus3</id>-->
+            <!--<url>http://10.211.55.25:18081/repository/maven-public/</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+
+    <!-- 部署到远程私有仓库 -->
+    <distributionManagement>
+        <!-- 正式版本 -->
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://10.211.55.25:18081/repository/maven-releases/</url>
+        </repository>
+        <!-- 测试版本 -->
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://10.211.55.25:18081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 
     <!-- 在 properties 下声明相应的版本信息，然后在 dependency 下引用的时候用 ${} 就可以引入该版本 jar 包了 -->
     <properties>

@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.zwc</groupId>
         <artifactId>osc-service</artifactId>
-        <version>1.4.3</version>
+        <version>1.4.4</version>
     </parent>
 
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-registry-service</artifactId>
-    <version>1.4.3</version>
+    <version>1.4.4</version>
 
     <!-- 工程名称描述 -->
     <name>osc-registry-service</name>
@@ -53,10 +53,10 @@
                 <version>1.1.1</version>
                 <!-- 绑定插件执行动作 -->
                 <executions>
-                    <!-- mav package = mav package + docker:build + docker:push -->
+                    <!-- mav deploy = mav deploy + docker:build + docker:push -->
                     <execution>
                         <id>build-image</id>
-                        <phase>package</phase>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>build</goal>
                             <goal>push</goal>
