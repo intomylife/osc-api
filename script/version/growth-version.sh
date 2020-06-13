@@ -39,6 +39,9 @@ then
     ## 3. 更新 service 工程版本号
     mvn versions:set -DoldVersion=* -DnewVersion=${new_versiont} -DgenerateBackupPoms=${is_bak}
 
+    ## 4. 返回根目录
+    cd ../
+
     ## 结束
     echo [INFO] ----------------------------- end --------------------------------------
 

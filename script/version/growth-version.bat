@@ -18,7 +18,7 @@ if defined new_versiont (
     REM ## 1. 更新 commons 工程版本号
     cd osc-commons/
     REM ## 获取当前工程的版本号
-    REM for /f "delims=" %%i in ('..\old-version.bat') do set old_version=%%i
+    REM for /f "delims=" %%i in ('..\script\version\old-version.bat') do set old_version=%%i
     REM ## 输出看一眼
     REM echo old_version: %old_version%
     REM ## 升级
@@ -27,7 +27,7 @@ if defined new_versiont (
     REM ## 2. 更新 service 工程中的 commons 工程版本号
     cd ../osc-service/
     REM ## 获取当前工程的版本号
-    REM for /f "delims=" %%i in ('..\old-version.bat') do set old_version=%%i
+    REM for /f "delims=" %%i in ('..\script\version\old-version.bat') do set old_version=%%i
     REM ## 输出看一眼
     REM echo old_version: %old_version%
     REM ## 更新
@@ -35,6 +35,9 @@ if defined new_versiont (
 
     REM ## 3. 更新 service 工程版本号
     mvn versions:set -DoldVersion=* -DnewVersion=%new_versiont% -DgenerateBackupPoms=%is_bak%
+
+    REM ## 4. 返回根目录
+    cd ../
 
     REM ## 结束
     echo [INFO] ----------------------------- end --------------------------------------
