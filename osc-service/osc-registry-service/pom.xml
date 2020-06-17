@@ -53,7 +53,7 @@
                 <version>1.1.1</version>
                 <!-- 绑定插件执行动作 -->
                 <executions>
-                    <!-- mav deploy = mav deploy + docker:build + docker:push -->
+                    <!-- mvn deploy = mvn deploy + docker:build + docker:push -->
                     <execution>
                         <id>build-image</id>
                         <phase>deploy</phase>
