@@ -1,5 +1,6 @@
 package com.zwc.core.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -19,6 +20,17 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
+
+    /**
+     *  应用名称
+     */
+    @Value("${osc.swagger.name}")
+    private String name;
+    /**
+     *  版本号
+     */
+    @Value("${osc.swagger.version}")
+    private String version;
 
     /*
      * @ClassName SwaggerConfig
@@ -45,9 +57,9 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
-                .title("api") // 标题
+                .title(name) // 标题
                 .description("接口文档") // 描述
-                .version("1.0.1")   // 版本
+                .version(version)   // 版本
                 .build();
     }
 

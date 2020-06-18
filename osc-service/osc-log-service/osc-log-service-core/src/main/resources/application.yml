@@ -59,6 +59,14 @@ logging:
   level:
     com.zwc.base.mapper: debug
 
+# swagger-ui 页面描述信息
+osc:
+  swagger:
+    ## 应用名称
+    name: @project.description@
+    ## 版本号
+    version: @project.version@
+
 ---
 
 # 端口

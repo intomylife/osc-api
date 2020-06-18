@@ -6,7 +6,7 @@
     <!-- 三坐标 -->
     <groupId>com.zwc</groupId>
     <artifactId>osc-commons</artifactId>
-    <version>1.4.4</version>
+    <version>1.4.5</version>
 
     <!-- 工程名称和描述 -->
     <name>osc-commons</name>
@@ -223,6 +223,20 @@
 
     <!-- 插件依赖 -->
     <build>
+        <!-- 过滤资源文件 -->
+        <!-- 常见的场景：用来指定 Mapper 文件的位置 -->
+        <!-- 当设置 filtering 为 true 后，includes 中指定的文件就可以使用 @xx.xx@ 占位符方式引用到 Maven 中的属性了  -->
+        <!-- 而当工程中引入了 spring-boot-starter-parent 依赖时，可以直接使用 @xx.xx@ 占位符方式引用到 Maven 中的属性  -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
